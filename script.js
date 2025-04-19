@@ -31,3 +31,11 @@ function toggleHighlight() {
         specialElement.style.borderRadius = '';
     }
 }
+
+function addMenuItem() {
+    const menuList = document.getElementById('menuList');
+    const newItem = document.createElement('div');
+    newItem.className = 'menu-item';
+    newItem.textContent = `New Pastry ${++itemCount} - $${(15 + itemCount).toFixed(2)}`;
+    menuList.appendChild(newItem);
+}
