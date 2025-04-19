@@ -39,3 +39,12 @@ function addMenuItem() {
     newItem.textContent = `New Pastry ${++itemCount} - $${(15 + itemCount).toFixed(2)}`;
     menuList.appendChild(newItem);
 }
+
+function removeMenuItem() {
+    const menuList = document.getElementById('menuList');
+    const lastItem = menuList.lastElementChild;
+    if (lastItem) {
+        menuList.removeChild(lastItem);
+        itemCount--;
+    }
+}
